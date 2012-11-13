@@ -8,6 +8,6 @@ version           "1.0.2"
 recipe "logrotate", "Installs logrotate package"
 provides "logrotate_app"
 
-%w{ redhat centos debian ubuntu scientific amazon fedora }.each do |os|
+%w{ redhat centos debian ubuntu scientific amazon fedora freebsd }.each do |os|
   supports os
 end

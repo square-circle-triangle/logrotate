@@ -37,7 +37,7 @@ define :logrotate_app, :enable => true, :frequency => "weekly", :template => "lo
       cookbook params[:cookbook]
       mode 0440
       owner "root"
-      group "root"
+      group platform?("freebsd") ? "wheel" : "root"
       backup false
       variables(
         :path => path,
